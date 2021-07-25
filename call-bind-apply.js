@@ -12,7 +12,7 @@ function printName(hometown1, hometown2) {
   );
 }
 
-names = {
+let names = {
   first: "Saurav",
   last: "Gupta",
 };
