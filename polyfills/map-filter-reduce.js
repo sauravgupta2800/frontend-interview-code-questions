@@ -17,10 +17,10 @@ Array.prototype.myMap = function (callback) {
 };
 
 // Filter
-Array.prototype.myFilter = function (callback, context) {
+Array.prototype.myFilter = function (callback) {
   var arr = [];
   for (var i = 0; i < this.length; i++) {
-    if (callback.call(context, this[i], i, this)) {
+    if (callback(this[i], i, this)) {
       arr.push(this[i]);
     }
   }
@@ -36,8 +36,6 @@ Array.prototype.myReduce = function (callback, initialValue) {
     } else {
       accumulator = this[i];
     }
-
-    console.log(accumulator);
   }
   return accumulator;
 };
@@ -50,11 +48,11 @@ Array.prototype.myReduce = function (callback, initialValue) {
 //   return item;
 // });
 
-// let filteredAns = arr.myFilter((item, index, patannhi) => {
-//   return true;
-// });
+let filteredAns = arr.myFilter((item, index, patannhi) => {
+  return true;
+});
 
-// console.log(filteredAns);
+console.log(filteredAns);
 
-const sum = arr.myReduce((acc, el) => acc + el, 0);
-console.log(sum);
+// const sum = arr.myReduce((acc, el) => acc + el, 0);
+// console.log(sum);
