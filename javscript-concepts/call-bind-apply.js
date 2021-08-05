@@ -2,8 +2,8 @@
 CALL, BIND & APPLY
 ==================
 call: call method used to invoke a method directly. Its arguments are refernce of variable & comma separated arguments. 
-bind: call: call method used to invoke a method directly. Its arguments are refernce of variable & array formed arguments.
-apply: gives the copy of the method which we can use later on the code. It form closure with the refernce & args
+apply: apply method used to invoke a method directly. Its arguments are refernce of variable & array formed arguments.
+bind: gives the copy of the method which we can use later on the code. It form closure with the refernce & args
 */
 
 function printName(hometown1, hometown2) {
