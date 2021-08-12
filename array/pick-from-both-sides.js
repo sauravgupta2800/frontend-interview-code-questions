@@ -52,4 +52,23 @@ function solve(arr, B) {
   return -1;
 }
 
-console.log(solve2([1, 2, 4, 4, 6], 4));
+function solve2(arr, B) {
+  let st = 0,
+    en = arr.length - 1,
+    res = 0;
+  if (arr[en] <= B) return arr.length;
+
+  while (st <= en) {
+    const mid = Math.floor((st + en) / 2);
+
+    if (arr[mid] > B) {
+      res = mid;
+      en = mid - 1;
+    } else {
+      st = mid + 1;
+    }
+  }
+  return res;
+}
+
+console.log(solve2([1, 1, 1, 1], 1));
